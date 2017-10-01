@@ -1,0 +1,25 @@
+Fork duplicates a process. The dupicated process is a child of the calling process.
+Errors: fork can not allocate memory for the child. The ressource limit was reached (CPU or Ram)
+
+stat resturns information about a file. Normally no permission is required.
+First argument is the path to a file, second argument is a struct which acts us buffer.
+Return Value is a integer which acts as indicater if everything was right.
+
+kill sends a signal to a process. first arg is the pid of the process. second is the signal you want to send.
+errors: the signal is invalid...
+
+mmap creates a mapping space of calling process. First arg is where the mapping starts. second arg is the length of the mapping.
+third is a enum for memory protection. the flag arg determines if updates are visible. the fifth arg is also a Enum. The last arg is a offset.
+
+chmod changes the permission of a file. First arg is the path, second is the change.
+returns the process id.
+errors: path not reachable...
+
+exec can fail because of: errors :D will return errno to get the error.
+
+unlink errors: Write access not given, file path is wrong, filepath is already being used by system...
+
+read errors: file descriptor is false, or data is not set to reading
+
+mount errors: source is already mounted on filesystem or pointer was to large...
+
